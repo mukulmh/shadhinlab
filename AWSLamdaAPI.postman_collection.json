@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "4cb8f22d-d3ad-4144-a4b0-e5c497948ede",
+		"name": "AWSLamdaAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9394733"
+	},
+	"item": [
+		{
+			"name": "simple sum (REST)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"num1\": 8,\r\n    \"num2\": 5.64\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://uyyht6l44b.execute-api.ca-central-1.amazonaws.com/test-stage/simplesum",
+					"protocol": "https",
+					"host": [
+						"uyyht6l44b",
+						"execute-api",
+						"ca-central-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"test-stage",
+						"simplesum"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "simple sum (REST)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://uyyht6l44b.execute-api.ca-central-1.amazonaws.com/test-stage/simplesum?num1=5&num2=7.3",
+					"protocol": "https",
+					"host": [
+						"uyyht6l44b",
+						"execute-api",
+						"ca-central-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"test-stage",
+						"simplesum"
+					],
+					"query": [
+						{
+							"key": "num1",
+							"value": "5"
+						},
+						{
+							"key": "num2",
+							"value": "7.3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
