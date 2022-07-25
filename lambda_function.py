@@ -9,32 +9,24 @@ def lambda_handler(event, context):
     
     if method == "GET" :
         
-        num1 = event['queryStringParameters']['num1']
-        num2 = event['queryStringParameters']['num2']
-        
         try:
-            num1 = float(num1)
-            num2 = float(num2)
+            num1 = float(event['queryStringParameters']['num1'])
+            num2 = float(event['queryStringParameters']['num2'])
             result = num1+num2
             message = "Success"
-        except :
+
+        except:
             result = "NULL"
-            message = "Value Error"
+            message = "Value Error. Input params must be numeric."
         
     elif method == "POST" :
         body = json.loads(event['body'])
         
         num1 = (body['num1'])
         num2 = (body['num2'])
-        
-        try:
-            num1 = float(num1)
-            num2 = float(num2)
-            result = num1+num2
-            message = "Success"
-        except :
-            result = "NULL"
-            message = "Value Error"
+        result = num1+num2
+        message = "Success"
+
     
     else :
         message =  "Supported methods are GET & POST"
