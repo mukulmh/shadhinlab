@@ -16,8 +16,17 @@ def lambda_handler(event, context):
             message = "Success"
 
         except:
+            try:
+                num1 = float(event['queryStringParameters']['num1'])
+            except:
+                message ="num1 param must be numeric"
+            try:
+                num2 = float(event['queryStringParameters']['num2'])
+            except:
+                message ="num2 param must be numeric"
+
             result = "NULL"
-            message = "Value Error. Input params must be numeric."
+                
         
     elif method == "POST" :
         body = json.loads(event['body'])
