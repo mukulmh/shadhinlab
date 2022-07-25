@@ -15,11 +15,16 @@
 						"key": "Content-Type",
 						"value": "application/json",
 						"type": "text"
+					},
+					{
+						"key": "authorizationToken",
+						"value": "customtoken",
+						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"num1\": \"x\",\r\n    \"num2\": 5.4\r\n}",
+					"raw": "{\r\n    \"num1\": 5.3,\r\n    \"num2\": 5.2\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -56,6 +61,11 @@
 						"key": "Content-Type",
 						"value": "application/json",
 						"type": "text"
+					},
+					{
+						"key": "authorizationToken",
+						"value": "customtoken",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -63,7 +73,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://jk8ikfnt3i.execute-api.ca-central-1.amazonaws.com/dev/simplesum?num1=x&num2=7.5",
+					"raw": "https://jk8ikfnt3i.execute-api.ca-central-1.amazonaws.com/dev/simplesum?num1=x&num2=5",
 					"protocol": "https",
 					"host": [
 						"jk8ikfnt3i",
@@ -83,7 +93,7 @@
 						},
 						{
 							"key": "num2",
-							"value": "7.5"
+							"value": "5"
 						}
 					]
 				}
