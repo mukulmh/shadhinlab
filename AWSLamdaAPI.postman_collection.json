@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "simple sum (REST)",
+			"name": "Simple Sum(POST)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -19,7 +19,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"num1\": 8,\r\n    \"num2\": 5.64\r\n}",
+					"raw": "{\r\n    \"num1\": \"x\",\r\n    \"num2\": 5.4\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -27,17 +27,17 @@
 					}
 				},
 				"url": {
-					"raw": "https://uyyht6l44b.execute-api.ca-central-1.amazonaws.com/test-stage/simplesum",
+					"raw": "https://jk8ikfnt3i.execute-api.ca-central-1.amazonaws.com/dev/simplesum",
 					"protocol": "https",
 					"host": [
-						"uyyht6l44b",
+						"jk8ikfnt3i",
 						"execute-api",
 						"ca-central-1",
 						"amazonaws",
 						"com"
 					],
 					"path": [
-						"test-stage",
+						"dev",
 						"simplesum"
 					]
 				}
@@ -45,7 +45,7 @@
 			"response": []
 		},
 		{
-			"name": "simple sum (REST)",
+			"name": "Simple Sum(GET)",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -60,35 +60,30 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": ""
 				},
 				"url": {
-					"raw": "https://uyyht6l44b.execute-api.ca-central-1.amazonaws.com/test-stage/simplesum?num1=5&num2=7.3",
+					"raw": "https://jk8ikfnt3i.execute-api.ca-central-1.amazonaws.com/dev/simplesum?num1=x&num2=7.5",
 					"protocol": "https",
 					"host": [
-						"uyyht6l44b",
+						"jk8ikfnt3i",
 						"execute-api",
 						"ca-central-1",
 						"amazonaws",
 						"com"
 					],
 					"path": [
-						"test-stage",
+						"dev",
 						"simplesum"
 					],
 					"query": [
 						{
 							"key": "num1",
-							"value": "5"
+							"value": "x"
 						},
 						{
 							"key": "num2",
-							"value": "7.3"
+							"value": "7.5"
 						}
 					]
 				}
